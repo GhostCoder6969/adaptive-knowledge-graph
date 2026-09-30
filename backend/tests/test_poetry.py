@@ -48,7 +48,6 @@ def test_required_dependencies():
         "torch",
         "neo4j",
         "networkx",
-        "rdflib",
         "opensearch-py",
         "beautifulsoup4",
         "pydantic",
@@ -80,7 +79,7 @@ def test_ruff_configuration():
     assert "ruff" in data["tool"]
     ruff_config = data["tool"]["ruff"]
     assert "line-length" in ruff_config
-    assert ruff_config["target-version"] == "py310"
+    assert ruff_config["target-version"] == "py311"
 
 
 def test_mypy_configuration():
